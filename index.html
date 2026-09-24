@@ -16,33 +16,23 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f7f4;
-    color: #222;
-    line-height: 1.7;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f8f6;
 }
 
 header {
-    background: linear-gradient(135deg, #0d4d2b, #23864d);
+    background: linear-gradient(135deg, #125b35, #1c7a48);
     color: white;
     text-align: center;
-    padding: 75px 20px;
+    padding: 45px 20px;
 }
 
 header h1 {
-    font-size: 42px;
-    margin-bottom: 8px;
-}
-
-header .registered {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 15px;
+    font-size: 34px;
+    margin-bottom: 10px;
 }
 
 header p {
@@ -50,115 +40,76 @@ header p {
 }
 
 nav {
-    background: white;
-    padding: 14px 8px;
+    background: #083d24;
     text-align: center;
+    padding: 14px 10px;
     position: sticky;
     top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    z-index: 10;
 }
 
 nav a {
-    color: #125b35;
+    color: white;
     text-decoration: none;
+    margin: 0 12px;
     font-weight: bold;
-    margin: 5px 9px;
-    display: inline-block;
 }
 
 nav a:hover {
-    color: #239154;
+    text-decoration: underline;
 }
 
 section {
     max-width: 1100px;
-    margin: 35px auto;
-    padding: 42px 30px;
-    background: white;
-    border-radius: 14px;
-    box-shadow: 0 3px 16px rgba(0,0,0,0.07);
+    margin: auto;
+    padding: 55px 20px;
 }
 
 h2 {
+    text-align: center;
     color: #125b35;
+    margin-bottom: 25px;
     font-size: 30px;
-    margin-bottom: 20px;
-}
-
-h3 {
-    color: #125b35;
-    margin-bottom: 10px;
-}
-
-p {
-    margin-bottom: 14px;
-}
-
-.hero-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 24px;
-    background: white;
-    color: #125b35;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
 }
 
 .intro {
     text-align: center;
+    font-size: 18px;
+    max-width: 850px;
+    margin: auto;
 }
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
 }
 
 .card {
-    background: #edf7ef;
+    background: white;
     padding: 25px;
     border-radius: 12px;
-    border-top: 5px solid #17643a;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
 .card h3 {
-    font-size: 21px;
-}
-
-.chairman {
-    background: #eef7f0;
-    text-align: center;
-}
-
-.chairman-name {
-    font-size: 25px;
-    font-weight: bold;
     color: #125b35;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.wisdom {
-    max-width: 850px;
-    margin: auto;
-    font-size: 18px;
-}
-
-.quote {
+.message {
     background: white;
-    padding: 25px;
-    border-left: 5px solid #17643a;
-    border-radius: 8px;
-    font-style: italic;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    max-width: 900px;
+    margin: auto;
 }
 
-.projects ul {
-    padding-left: 22px;
-}
-
-.projects li {
-    margin-bottom: 12px;
+.message h3 {
+    color: #125b35;
+    margin-bottom: 15px;
 }
 
 .gallery {
@@ -167,30 +118,11 @@ p {
     gap: 20px;
 }
 
-.gallery-item {
-    background: #edf7ef;
+.gallery-box {
+    height: 180px;
+    background: #dfe9e3;
+    border: 2px dashed #75a88a;
     border-radius: 12px;
-    overflow: hidden;
-    text-align: center;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    display: block;
-}
-
-.gallery-item p {
-    padding: 12px;
-    margin: 0;
-    font-weight: bold;
-    color: #125b35;
-}
-
-.photo-placeholder {
-    height: 190px;
-    background: #dfeee2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -199,42 +131,27 @@ p {
 }
 
 .video-box {
+    background: white;
+    padding: 40px 20px;
     text-align: center;
-}
-
-.video-placeholder {
-    background: #edf7ef;
     border-radius: 12px;
-    padding: 45px 20px;
-    color: #125b35;
-    font-weight: bold;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
 .contact {
     background: #125b35;
     color: white;
+    text-align: center;
+    max-width: none;
 }
 
 .contact h2 {
     color: white;
 }
 
-.contact-box {
+.contact p {
+    margin: 10px 0;
     font-size: 18px;
-}
-
-.contact a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact a:hover {
-    text-decoration: underline;
-}
-
-.contact-buttons {
-    margin-top: 25px;
 }
 
 .contact-button {
@@ -243,4 +160,325 @@ p {
     color: #125b35 !important;
     padding: 11px 20px;
     border-radius: 25px;
-    margin: 5
+    margin: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-button:hover {
+    background: #e8f2ec;
+}
+
+.address {
+    margin-top: 25px;
+    font-size: 17px;
+}
+
+footer {
+    background: #083d24;
+    color: white;
+    text-align: center;
+    padding: 22px 15px;
+}
+
+ul {
+    max-width: 850px;
+    margin: auto;
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #125b35;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 7px;
+        font-size: 14px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Satyavache Charitable Foundation (Reg.)</h1>
+    <p>Serving Humanity • Empowering Communities • Building a Better Future</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#work">Our Work</a>
+    <a href="#vision">Vision</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+
+    <h2>About Us</h2>
+
+    <p class="intro">
+        Satyavache Charitable Foundation (Reg.) is a community-oriented
+        charitable organisation working for education, social welfare,
+        youth development, health awareness, community development and
+        the overall well-being of society.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>Chairman's Message</h2>
+
+    <div class="message">
+
+        <h3>Shri Sanjeev Goswami</h3>
+
+        <p>
+            "True service begins when we look beyond ourselves and work
+            for the dignity, education and well-being of others. Every
+            small effort made with honesty and compassion can create a
+            meaningful change in society."
+        </p>
+
+        <br>
+
+        <p>
+            Satyavache Charitable Foundation believes that lasting
+            development is created through education, cooperation,
+            responsible citizenship and service to the community.
+            Together, we can build stronger villages, brighter
+            opportunities for children and a more caring society.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="work">
+
+    <h2>Our Work</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Education</h3>
+            <p>
+                Supporting educational opportunities and encouraging
+                children and young people to learn, grow and achieve
+                their potential.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Student Support</h3>
+            <p>
+                Educational kits and other forms of assistance can help
+                students continue their education with confidence.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Community Development</h3>
+            <p>
+                Working towards better public spaces, community
+                facilities and local development initiatives.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Health & Welfare</h3>
+            <p>
+                Promoting health awareness, welfare activities and
+                community support for people in need.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Youth & Sports</h3>
+            <p>
+                Encouraging young people to participate in sports,
+                fitness, discipline and constructive community activities.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Social Service</h3>
+            <p>
+                Encouraging volunteers to contribute their time,
+                skills and resources towards meaningful social causes.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Environment</h3>
+            <p>
+                Supporting awareness and activities that encourage
+                cleaner, greener and healthier surroundings.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Community Awareness</h3>
+            <p>
+                Spreading awareness about education, health, civic
+                responsibility and social development.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <h2>Community Initiatives</h2>
+
+    <ul>
+        <li>Development and improvement of village public spaces and parks.</li>
+        <li>Support for students through educational kits and assistance.</li>
+        <li>Improvement and renovation of educational facilities.</li>
+        <li>Support for community infrastructure and local development.</li>
+        <li>Promotion of youth sports, fitness and healthy lifestyles.</li>
+        <li>Vision for a public digital library to support students and citizens.</li>
+        <li>Exploring future community health and dispensary initiatives.</li>
+        <li>Encouraging volunteerism and participation in social service.</li>
+    </ul>
+
+</section>
+
+<section id="vision">
+
+    <h2>Our Mission</h2>
+
+    <p class="intro">
+        To serve society with honesty, compassion and responsibility
+        while creating opportunities in education, health, youth
+        development and community welfare.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>Our Vision</h2>
+
+    <p class="intro">
+        To help build educated, healthy, united and self-reliant
+        communities where every person has the opportunity to live
+        with dignity and hope.
+    </p>
+
+</section>
+
+<section id="gallery">
+
+    <h2>Photo Gallery</h2>
+
+    <div class="gallery">
+
+        <div class="gallery-box">PHOTO 1</div>
+        <div class="gallery-box">PHOTO 2</div>
+        <div class="gallery-box">PHOTO 3</div>
+        <div class="gallery-box">PHOTO 4</div>
+        <div class="gallery-box">PHOTO 5</div>
+        <div class="gallery-box">PHOTO 6</div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <h2>Video Gallery</h2>
+
+    <div class="video-box">
+
+        <h3>Foundation Activities</h3>
+
+        <p>
+            Videos of foundation activities, community programmes,
+            educational initiatives and social service activities
+            can be added here.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="contact" class="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>
+        <strong>Satyavache Charitable Foundation (Reg.)</strong>
+    </p>
+
+    <p>
+        <a class="contact-button" href="tel:9988130729">
+            📞 9988130729
+        </a>
+
+        <a class="contact-button" href="tel:8872295035">
+            📞 8872295035
+        </a>
+    </p>
+
+    <p>
+        <a class="contact-button" href="mailto:satyavachecharitablefoundation@gmail.com">
+            ✉ Email Us
+        </a>
+    </p>
+
+    <div class="address">
+
+        <p><strong>Office Address</strong></p>
+
+        <p>
+            Village Malmazara<br>
+            P.O. Chagran<br>
+            District Hoshiarpur<br>
+            Punjab, India
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 Satyavache Charitable Foundation (Reg.)
+    </p>
+
+    <p>
+        Serving Humanity with Honesty, Compassion and Responsibility.
+    </p>
+
+</footer>
+
+</body>
+</html>
