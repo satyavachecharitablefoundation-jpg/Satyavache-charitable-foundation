@@ -1,1 +1,0 @@
-# Satyavache-charitable-foundation
