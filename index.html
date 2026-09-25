@@ -9,13 +9,11 @@
 <meta name="description" content="Satyavache Charitable Foundation (Reg.) - Serving the community through education, development, welfare and social service.">
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
-
-html{
     scroll-behavior:smooth;
 }
 
@@ -23,38 +21,75 @@ body{
     font-family:Arial, Helvetica, sans-serif;
     line-height:1.6;
     color:#333;
-    background:#f7faf8;
+    background:#f7f9f7;
 }
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* HEADER */
 
 header{
-    background:linear-gradient(135deg,#075e2c,#159447);
+    background:#173d25;
     color:white;
-    padding:35px 20px;
-    text-align:center;
+    padding:20px 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-/* LOGO */
+.header-content{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
 
 .logo{
-    width:110px;
-    height:110px;
+    width:75px;
+    height:75px;
     object-fit:contain;
-    display:block;
-    margin:0 auto 15px;
     border-radius:50%;
     background:white;
-    padding:5px;
-    border:4px solid #d9f5e3;
+    padding:4px;
 }
 
-header h1{
-    font-size:32px;
-    margin-bottom:8px;
+.header-text h1{
+    font-size:28px;
+    margin-bottom:3px;
 }
 
-header p{
-    font-size:17px;
-    opacity:.95;
+.header-text p{
+    font-size:14px;
+    color:#dcebdc;
+}
+
+/* NAVIGATION */
+
+nav{
+    background:#0f2d1b;
+    padding:10px 0;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:22px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#f4c542;
 }
 
 /* MOTIVATIONAL QUOTES */
@@ -72,88 +107,64 @@ header p{
 .quote-track{
     display:inline-block;
     padding-left:100%;
-    animation:scrollQuotes 28s linear infinite;
+    animation:scrollQuotes 35s linear infinite;
 }
 
 @keyframes scrollQuotes{
     0%{
         transform:translateX(0);
     }
+
     100%{
         transform:translateX(-100%);
     }
 }
 
-nav{
-    background:#064b25;
-    padding:13px 10px;
-    text-align:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
+/* HERO */
 
-nav a{
+.hero{
+    background:linear-gradient(rgba(23,61,37,0.85),rgba(23,61,37,0.85)),
+    url("logo.png") center/contain no-repeat;
+    background-color:#173d25;
     color:white;
-    text-decoration:none;
-    margin:0 12px;
-    font-size:15px;
-    font-weight:bold;
+    text-align:center;
+    padding:90px 20px;
 }
 
-nav a:hover{
-    color:#b9f5ce;
+.hero h2{
+    font-size:40px;
+    margin-bottom:15px;
 }
+
+.hero p{
+    font-size:19px;
+    max-width:800px;
+    margin:auto;
+}
+
+/* SECTIONS */
 
 section{
-    padding:60px 20px;
-}
-
-.container{
-    max-width:1100px;
-    margin:auto;
+    padding:65px 0;
 }
 
 .section-title{
     text-align:center;
-    color:#075e2c;
-    font-size:30px;
-    margin-bottom:10px;
+    color:#173d25;
+    font-size:32px;
+    margin-bottom:12px;
 }
 
 .section-line{
     width:70px;
     height:4px;
-    background:#159447;
+    background:#f4c542;
     margin:0 auto 35px;
-    border-radius:5px;
-}
-
-.welcome{
-    text-align:center;
-    background:white;
-}
-
-.welcome h2{
-    color:#075e2c;
-    font-size:34px;
-    margin-bottom:15px;
-}
-
-.welcome p{
-    max-width:850px;
-    margin:auto;
-    font-size:17px;
-    color:#555;
 }
 
 /* ABOUT */
 
-.about{
-    background:#eef8f1;
-}
-
-.about p{
+.about-text{
     max-width:900px;
     margin:auto;
     text-align:center;
@@ -162,212 +173,96 @@ section{
 
 /* LEADERSHIP */
 
-.message-section{
-    background:white;
+.leadership{
+    background:#eef5ef;
 }
 
-.message-container{
-    max-width:950px;
-    margin:auto;
-}
-
-.message{
-    background:#f5faf6;
-    border-left:6px solid #159447;
-    padding:28px;
-    margin-bottom:28px;
-    border-radius:8px;
-    box-shadow:0 5px 18px rgba(0,0,0,.06);
-}
-
-.message h3{
-    color:#075e2c;
-    margin-bottom:5px;
-    font-size:23px;
-}
-
-.message .designation{
-    font-weight:bold;
-    color:#666;
-    margin-bottom:15px;
-}
-
-.message p{
-    font-size:16px;
-}
-
-.appreciation{
-    background:#e8f7ed;
-    border:1px solid #c7e8d1;
-    padding:28px;
-    border-radius:10px;
-    margin-top:15px;
-}
-
-.appreciation h3{
-    color:#075e2c;
-    margin-bottom:15px;
-}
-
-.signature{
-    margin-top:20px;
-    font-weight:bold;
-    color:#075e2c;
-}
-
-/* OUR WORK */
-
-.work{
-    background:#f7faf8;
-}
-
-.work-intro{
-    max-width:900px;
-    margin:0 auto 35px;
-    text-align:center;
-    font-size:17px;
-    color:#555;
-}
-
-/* HIGHLIGHTED COMPLETED WORK */
-
-.completed-work{
-    background:linear-gradient(135deg,#075e2c,#159447);
-    color:white;
-    padding:35px 25px;
-    border-radius:18px;
-    margin-bottom:40px;
-    box-shadow:0 10px 30px rgba(0,0,0,.12);
-}
-
-.completed-work h3{
-    text-align:center;
-    font-size:26px;
-    margin-bottom:10px;
-}
-
-.completed-work .subtitle{
-    text-align:center;
-    margin-bottom:28px;
-    opacity:.95;
-}
-
-.work-list{
+.leader-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:16px;
-}
-
-.work-item{
-    background:white;
-    color:#333;
-    padding:18px 20px;
-    border-radius:10px;
-    display:flex;
-    align-items:flex-start;
-    gap:12px;
-    font-weight:bold;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.work-item:hover{
-    transform:translateY(-4px);
-    box-shadow:0 8px 18px rgba(0,0,0,.15);
-}
-
-.work-icon{
-    background:#159447;
-    color:white;
-    min-width:30px;
-    height:30px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
-}
-
-/* WORK CARDS */
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
     gap:25px;
 }
 
-.card{
+.leader-card{
     background:white;
-    padding:28px 22px;
+    padding:30px;
     border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
     text-align:center;
-    box-shadow:0 5px 18px rgba(0,0,0,.07);
-    transition:.3s;
 }
 
-.card:hover{
-    transform:translateY(-5px);
+.leader-card h3{
+    color:#173d25;
+    margin-bottom:8px;
 }
 
-.card h3{
-    color:#075e2c;
-    margin-bottom:12px;
+.leader-card p{
+    margin-bottom:8px;
 }
 
-.card p{
-    color:#666;
+/* WORK */
+
+.work-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.work-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.work-card h3{
+    color:#173d25;
+    margin-bottom:10px;
 }
 
 /* INITIATIVES */
 
 .initiatives{
-    background:white;
+    background:#eef5ef;
 }
 
-.initiative-list{
-    max-width:900px;
+.initiatives ul{
+    max-width:850px;
     margin:auto;
+    padding-left:25px;
 }
 
-.initiative-list div{
-    background:#f0f8f3;
-    border-left:5px solid #159447;
-    padding:16px 20px;
+.initiatives li{
     margin-bottom:12px;
-    border-radius:6px;
-    font-weight:bold;
+    font-size:17px;
 }
 
 /* MISSION */
 
-.mission{
-    background:#eef8f1;
-}
-
 .mission-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
-    max-width:950px;
-    margin:auto;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
 }
 
-.mission-box{
-    background:white;
-    padding:30px;
+.mission-card{
+    background:#173d25;
+    color:white;
+    padding:35px;
     border-radius:12px;
-    box-shadow:0 5px 18px rgba(0,0,0,.06);
+    text-align:center;
 }
 
-.mission-box h3{
-    color:#075e2c;
+.mission-card h3{
+    color:#f4c542;
     margin-bottom:12px;
+    font-size:25px;
 }
 
 /* GALLERY */
 
 .gallery{
-    background:white;
+    background:#f7f9f7;
 }
 
 .gallery-grid{
@@ -377,37 +272,21 @@ section{
 }
 
 .gallery-box{
-    height:190px;
-    border-radius:10px;
-    background:#e8f2eb;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:#075e2c;
-    font-weight:bold;
-    border:2px dashed #9acbab;
-}
-
-.video-box{
-    max-width:850px;
-    margin:30px auto 0;
-    height:250px;
+    height:200px;
+    background:#e2e8e3;
     border-radius:12px;
-    background:#e8f2eb;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    color:#075e2c;
+    color:#607060;
     font-weight:bold;
-    border:2px dashed #9acbab;
 }
 
 /* CONTACT */
 
 .contact{
-    background:#075e2c;
+    background:#173d25;
     color:white;
     text-align:center;
 }
@@ -417,104 +296,110 @@ section{
 }
 
 .contact-info{
-    max-width:750px;
+    max-width:800px;
     margin:auto;
-}
-
-.contact-info p{
-    margin:14px 0;
     font-size:17px;
 }
 
+.contact-info p{
+    margin:15px 0;
+}
+
 .contact-info a{
-    color:white;
+    color:#f4c542;
     text-decoration:none;
-    font-weight:bold;
 }
 
 .contact-info a:hover{
-    color:#b9f5ce;
+    text-decoration:underline;
 }
 
 .social-links{
-    margin-top:25px;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:12px;
+    gap:15px;
+    margin:25px 0;
 }
 
 .social-links a{
-    display:inline-block;
+    background:#f4c542;
+    color:#173d25;
     padding:10px 18px;
-    background:white;
-    color:#075e2c;
     border-radius:25px;
-    text-decoration:none;
     font-weight:bold;
-    transition:.3s;
+    text-decoration:none;
 }
 
 .social-links a:hover{
-    transform:translateY(-3px);
-    background:#dff5e6;
+    background:white;
 }
 
 .contact-button{
     display:inline-block;
-    margin-top:25px;
+    background:#f4c542;
+    color:#173d25 !important;
     padding:12px 25px;
-    background:white;
-    color:#075e2c;
     border-radius:25px;
-    text-decoration:none;
     font-weight:bold;
+    margin-top:10px;
+    text-decoration:none;
 }
 
+/* FOOTER */
+
 footer{
-    background:#04351a;
+    background:#0f2d1b;
     color:white;
     text-align:center;
-    padding:22px 15px;
+    padding:25px 15px;
     font-size:14px;
 }
 
 /* MOBILE */
 
-@media(max-width:800px){
+@media(max-width:768px){
 
-    header h1{
-        font-size:25px;
-    }
-
-    header p{
-        font-size:15px;
+    .header-content{
+        flex-direction:column;
+        text-align:center;
     }
 
     .logo{
-        width:95px;
-        height:95px;
+        width:65px;
+        height:65px;
+    }
+
+    .header-text h1{
+        font-size:23px;
+    }
+
+    nav ul{
+        gap:12px;
     }
 
     nav a{
-        display:inline-block;
-        margin:5px 7px;
         font-size:13px;
     }
 
-    section{
-        padding:45px 15px;
+    .hero{
+        padding:65px 15px;
     }
 
-    .work-list{
-        grid-template-columns:1fr;
+    .hero h2{
+        font-size:30px;
     }
 
-    .cards{
-        grid-template-columns:1fr;
+    .hero p{
+        font-size:16px;
     }
 
+    .leader-grid,
     .mission-grid{
+        grid-template-columns:1fr;
+    }
+
+    .work-grid{
         grid-template-columns:1fr;
     }
 
@@ -522,24 +407,11 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .welcome h2{
-        font-size:28px;
-    }
-
     .quote-bar{
         font-size:14px;
     }
-
-    .social-links{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    .social-links a{
-        width:90%;
-        max-width:300px;
-    }
 }
+
 </style>
 </head>
 
@@ -549,11 +421,23 @@ footer{
 
 <header>
 
-    <img src="logo.png" alt="Satyavache Charitable Foundation Logo" class="logo">
+    <div class="container header-content">
 
-    <h1>Satyavache Charitable Foundation (Reg.)</h1>
+        <img src="logo.png"
+             alt="Satyavache Charitable Foundation Logo"
+             class="logo">
 
-    <p>Serving Society • Empowering Communities • Building a Better Future</p>
+        <div class="header-text">
+
+            <h1>Satyavache Charitable Foundation (Reg.)</h1>
+
+            <p>
+                Serving Society • Empowering Communities • Building a Better Future
+            </p>
+
+        </div>
+
+    </div>
 
 </header>
 
@@ -561,42 +445,72 @@ footer{
 <!-- MOTIVATIONAL QUOTES -->
 
 <div class="quote-bar">
+
     <div class="quote-track">
-        “Service to humanity is service to society.” &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
-        “Education is the foundation of a better future.” &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
-        “Small efforts can create meaningful change.” &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
-        “Together we can build stronger communities.” &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
-        “Be the reason someone believes in a better tomorrow.” &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
-        “Every child deserves an opportunity to learn, grow and succeed.” &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+
+        “Service to humanity is service to society.”
+        &nbsp;&nbsp; • &nbsp;&nbsp;
+
+        “Education is the foundation of a better future.”
+        &nbsp;&nbsp; • &nbsp;&nbsp;
+
+        “Small efforts can create meaningful change.”
+        &nbsp;&nbsp; • &nbsp;&nbsp;
+
+        “Together we can build stronger communities.”
+        &nbsp;&nbsp; • &nbsp;&nbsp;
+
+        “Be the reason someone believes in a better tomorrow.”
+        &nbsp;&nbsp; • &nbsp;&nbsp;
+
+        “Every child deserves an opportunity to learn, grow and succeed.”
+        &nbsp;&nbsp; • &nbsp;&nbsp;
+
         “Serve with compassion. Work with honesty. Create with purpose.”
+
     </div>
+
 </div>
 
 
 <!-- NAVIGATION -->
 
 <nav>
-    <a href="#about">About Us</a>
-    <a href="#work">Our Work</a>
-    <a href="#leadership">Leadership</a>
-    <a href="#mission">Mission & Vision</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
+
+    <div class="container">
+
+        <ul>
+
+            <li><a href="#about">About Us</a></li>
+
+            <li><a href="#leadership">Leadership</a></li>
+
+            <li><a href="#work">Our Work</a></li>
+
+            <li><a href="#mission">Mission & Vision</a></li>
+
+            <li><a href="#gallery">Gallery</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </div>
+
 </nav>
 
 
-<!-- WELCOME -->
+<!-- HERO -->
 
-<section class="welcome">
+<section class="hero">
 
     <div class="container">
 
         <h2>Welcome to Satyavache Charitable Foundation</h2>
 
         <p>
-            Satyavache Charitable Foundation (Reg.) is committed to serving society
-            through education, community development, social welfare and meaningful
-            initiatives for the betterment of villages and future generations.
+            Working together for education, community development,
+            youth empowerment, student welfare and social service.
         </p>
 
     </div>
@@ -606,7 +520,7 @@ footer{
 
 <!-- ABOUT -->
 
-<section class="about" id="about">
+<section id="about">
 
     <div class="container">
 
@@ -614,13 +528,25 @@ footer{
 
         <div class="section-line"></div>
 
-        <p>
-            Satyavache Charitable Foundation (Reg.) works with a vision of creating
-            stronger, educated and self-reliant communities. Our efforts focus on
-            supporting students, improving educational facilities, developing public
-            spaces, encouraging youth activities and contributing towards the overall
-            welfare and development of the community.
-        </p>
+        <div class="about-text">
+
+            <p>
+                Satyavache Charitable Foundation (Reg.) is committed to
+                serving society with sincerity, compassion and dedication.
+                The foundation works for the welfare and development of
+                communities, with a special focus on education, students,
+                children, youth and public facilities.
+            </p>
+
+            <br>
+
+            <p>
+                Through various social and community initiatives, the
+                foundation aims to create opportunities, improve facilities
+                and contribute towards a stronger and more developed society.
+            </p>
+
+        </div>
 
     </div>
 
@@ -629,7 +555,7 @@ footer{
 
 <!-- LEADERSHIP -->
 
-<section class="message-section" id="leadership">
+<section class="leadership" id="leadership">
 
     <div class="container">
 
@@ -637,78 +563,61 @@ footer{
 
         <div class="section-line"></div>
 
-        <div class="message-container">
+        <div class="leader-grid">
 
-            <!-- CHAIRMAN -->
-
-            <div class="message">
+            <div class="leader-card">
 
                 <h3>Shri Sanjeev Goswami</h3>
 
-                <div class="designation">Chairman</div>
+                <p><strong>Chairman</strong></p>
 
                 <p>
-                    “True service begins when we look beyond ourselves and work for
-                    the dignity, education and well-being of others. Every small effort
-                    made with honesty and compassion can create meaningful change in
-                    society. Satyavache Charitable Foundation believes that lasting
-                    development is created through education, cooperation, responsible
-                    citizenship and service to the community.”
+                    We believe that meaningful social change begins
+                    with sincere service, collective effort and a commitment
+                    towards the welfare of society.
                 </p>
 
             </div>
 
 
-            <!-- PRESIDENT -->
-
-            <div class="message">
+            <div class="leader-card">
 
                 <h3>Shri Amarjit Singh</h3>
 
-                <div class="designation">
-                    President • Ex-Sarpanch, Village Malmazara
-                </div>
+                <p>
+                    <strong>President</strong><br>
+                    Ex-Sarpanch, Village Malmazara
+                </p>
 
                 <p>
-                    “The progress of a village is measured not only by its physical
-                    development, but also by the opportunities, education and dignity
-                    available to its people. Through Satyavache Charitable Foundation,
-                    we hope to encourage unity, service and collective responsibility.
-                    When people come together with sincerity and compassion, even small
-                    efforts can bring meaningful change to our community.”
+                    Our efforts are focused on education, development,
+                    welfare and creating better opportunities for the
+                    people of our community.
                 </p>
 
             </div>
 
+        </div>
 
-            <!-- APPRECIATION -->
+        <br><br>
 
-            <div class="appreciation">
+        <div class="leader-card">
 
-                <h3>A Note of Gratitude</h3>
+            <h3>Note of Gratitude</h3>
 
-                <p>
-                    On behalf of Satyavache Charitable Foundation and the community
-                    we seek to serve, I express my sincere gratitude and heartfelt
-                    appreciation to our respected Chairman, Shri Sanjeev Goswami.
-                    His guidance, encouragement and commitment to the values of
-                    service and social responsibility provide inspiration to our
-                    foundation. We deeply value his support and leadership in our
-                    journey towards creating educational opportunities, strengthening
-                    our community and working for the welfare of society. It is our
-                    sincere hope that, with continued cooperation and collective effort,
-                    we will be able to serve our community with greater dedication and
-                    create a positive legacy for future generations.
-                </p>
+            <p>
+                We express our sincere gratitude to all supporters,
+                volunteers, well-wishers and community members whose
+                cooperation helps us continue our social service initiatives.
+            </p>
 
-                <div class="signature">
-                    With respect and gratitude,<br><br>
-                    Shri Amarjit Singh<br>
-                    President<br>
-                    Satyavache Charitable Foundation (Reg.)
-                </div>
+            <br>
 
-            </div>
+            <p>
+                <strong>Shri Amarjit Singh</strong><br>
+                President<br>
+                Satyavache Charitable Foundation (Reg.)
+            </p>
 
         </div>
 
@@ -719,7 +628,7 @@ footer{
 
 <!-- OUR WORK -->
 
-<section class="work" id="work">
+<section id="work">
 
     <div class="container">
 
@@ -727,143 +636,148 @@ footer{
 
         <div class="section-line"></div>
 
-        <p class="work-intro">
-            Our foundation has undertaken and supported various initiatives focused
-            on education, village development, student welfare, youth development
-            and community infrastructure.
-        </p>
+        <div class="work-grid">
 
+            <div class="work-card">
 
-        <!-- HIGHLIGHTED COMPLETED WORK -->
+                <h3>1. Satyavache Park</h3>
 
-        <div class="completed-work">
-
-            <h3>Our Contributions & Completed Initiatives</h3>
-
-            <p class="subtitle">
-                Meaningful efforts made for education, community welfare and village development
-            </p>
-
-            <div class="work-list">
-
-                <div class="work-item">
-                    <span class="work-icon">✓</span>
-                    <span>Satyavache Park – development of a public community space</span>
-                </div>
-
-                <div class="work-item">
-                    <span class="work-icon">✓</span>
-                    <span>School renovation and improvement work</span>
-                </div>
-
-                <div class="work-item">
-                    <span class="work-icon">✓</span>
-                    <span>Construction of rooms and additional floor of the school</span>
-                </div>
-
-                <div class="work-item">
-                    <span class="work-icon">✓</span>
-                    <span>Playground facilities for small children</span>
-                </div>
-
-                <div class="work-item">
-                    <span class="work-icon">✓</span>
-                    <span>Fund provided for gym equipment and youth fitness facilities</span>
-                </div>
-
-                <div class="work-item">
-                    <span class="work-icon">✓</span>
-                    <span>Uniform distribution to students of government schools</span>
-                </div>
-
-                <div class="work-item">
-                    <span class="work-icon">✓</span>
-                    <span>Books and stationery distribution to students</span>
-                </div>
-
-                <div class="work-item">
-                    <span class="work-icon">✓</span>
-                    <span>New inverter provided for school facilities</span>
-                </div>
-
-                <div class="work-item">
-                    <span class="work-icon">✓</span>
-                    <span>Funds contributed towards the development of the village</span>
-                </div>
-
-                <div class="work-item">
-                    <span class="work-icon">✓</span>
-                    <span>
-                        Land purchased in the village for the proposed Digital Library;
-                        construction is starting soon
-                    </span>
-                </div>
-
-                <div class="work-item">
-                    <span class="work-icon">✓</span>
-                    <span>Support for education and welfare of children and students</span>
-                </div>
-
-                <div class="work-item">
-                    <span class="work-icon">✓</span>
-                    <span>Various other community welfare and social service initiatives</span>
-                </div>
+                <p>
+                    Development of a public community space for the
+                    benefit and recreation of local residents.
+                </p>
 
             </div>
 
-        </div>
 
+            <div class="work-card">
 
-        <!-- GENERAL WORK AREAS -->
+                <h3>2. School Renovation</h3>
 
-        <div class="cards">
-
-            <div class="card">
-                <h3>Education</h3>
                 <p>
-                    Supporting students through educational materials, school
-                    improvement and better learning facilities.
+                    Renovation and improvement work undertaken to
+                    improve school facilities.
                 </p>
+
             </div>
 
-            <div class="card">
-                <h3>Community Development</h3>
+
+            <div class="work-card">
+
+                <h3>3. School Construction</h3>
+
                 <p>
-                    Supporting village infrastructure, public spaces and initiatives
-                    that contribute to community development.
+                    Construction of rooms and an additional floor
+                    of the school.
                 </p>
+
             </div>
 
-            <div class="card">
-                <h3>Youth & Sports</h3>
+
+            <div class="work-card">
+
+                <h3>4. Children's Playground</h3>
+
                 <p>
-                    Encouraging young people through sports, fitness facilities,
-                    playgrounds and healthy community activities.
+                    Playground facilities developed for small children
+                    to encourage healthy recreation and activity.
                 </p>
+
             </div>
 
-            <div class="card">
-                <h3>Student Welfare</h3>
+
+            <div class="work-card">
+
+                <h3>5. Gym Equipment</h3>
+
                 <p>
-                    Providing educational kits, uniforms, books, stationery and
-                    other forms of support to students in need.
+                    Funds provided for gym equipment and youth
+                    fitness facilities.
                 </p>
+
             </div>
 
-            <div class="card">
-                <h3>Social Welfare</h3>
+
+            <div class="work-card">
+
+                <h3>6. Uniform Distribution</h3>
+
                 <p>
-                    Working towards the welfare, dignity and well-being of people
-                    through community-oriented initiatives.
+                    Uniforms distributed to students of government schools.
                 </p>
+
             </div>
 
-            <div class="card">
-                <h3>Public Facilities</h3>
+
+            <div class="work-card">
+
+                <h3>7. Books & Stationery</h3>
+
                 <p>
-                    Supporting useful public facilities and spaces that can benefit
-                    children, families and the wider community.
+                    Books and stationery distributed to students
+                    to support their education.
                 </p>
+
+            </div>
+
+
+            <div class="work-card">
+
+                <h3>8. School Inverter</h3>
+
+                <p>
+                    A new inverter provided to support school facilities
+                    and uninterrupted essential services.
+                </p>
+
+            </div>
+
+
+            <div class="work-card">
+
+                <h3>9. Village Development</h3>
+
+                <p>
+                    Funds contributed towards the development and
+                    welfare of the village.
+                </p>
+
+            </div>
+
+
+            <div class="work-card">
+
+                <h3>10. Digital Library</h3>
+
+                <p>
+                    Land purchased in the village for the proposed
+                    Digital Library. Construction is starting soon.
+                </p>
+
+            </div>
+
+
+            <div class="work-card">
+
+                <h3>11. Student Welfare</h3>
+
+                <p>
+                    Support provided for education and welfare of
+                    children and students.
+                </p>
+
+            </div>
+
+
+            <div class="work-card">
+
+                <h3>12. Social Service</h3>
+
+                <p>
+                    Various other community welfare and social service
+                    initiatives undertaken according to community needs.
+                </p>
+
             </div>
 
         </div>
@@ -883,25 +797,23 @@ footer{
 
         <div class="section-line"></div>
 
-        <div class="initiative-list">
+        <ul>
 
-            <div>✓ Education and student support</div>
+            <li>Supporting education and educational infrastructure.</li>
 
-            <div>✓ Village development and community infrastructure</div>
+            <li>Helping students through uniforms, books and stationery.</li>
 
-            <div>✓ School improvement and educational facilities</div>
+            <li>Supporting children's recreational and sports facilities.</li>
 
-            <div>✓ Youth sports and fitness development</div>
+            <li>Promoting youth fitness and sports activities.</li>
 
-            <div>✓ Public spaces and children's facilities</div>
+            <li>Supporting village development initiatives.</li>
 
-            <div>✓ Social welfare and community awareness</div>
+            <li>Developing public facilities for the community.</li>
 
-            <div>✓ Health and welfare initiatives</div>
+            <li>Working towards social welfare and community empowerment.</li>
 
-            <div>✓ Environmental and cleanliness efforts</div>
-
-        </div>
+        </ul>
 
     </div>
 
@@ -910,7 +822,7 @@ footer{
 
 <!-- MISSION & VISION -->
 
-<section class="mission" id="mission">
+<section id="mission">
 
     <div class="container">
 
@@ -920,10 +832,181 @@ footer{
 
         <div class="mission-grid">
 
-            <div class="mission-box">
+            <div class="mission-card">
 
                 <h3>Our Mission</h3>
 
                 <p>
-                    To serve society with sincerity and compassion by supporting
-                    education, student welfare, community de
+                    To serve society with sincerity and compassion by
+                    supporting education, student welfare, community
+                    development, youth empowerment and social service.
+                </p>
+
+            </div>
+
+
+            <div class="mission-card">
+
+                <h3>Our Vision</h3>
+
+                <p>
+                    To build stronger, educated and empowered communities
+                    where every individual has opportunities to grow,
+                    learn and contribute towards a better future.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="gallery" id="gallery">
+
+    <div class="container">
+
+        <h2 class="section-title">Gallery</h2>
+
+        <div class="section-line"></div>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-box">
+                Foundation Activities
+            </div>
+
+            <div class="gallery-box">
+                Education & Student Welfare
+            </div>
+
+            <div class="gallery-box">
+                Community Development
+            </div>
+
+            <div class="gallery-box">
+                Satyavache Park
+            </div>
+
+            <div class="gallery-box">
+                Youth & Sports
+            </div>
+
+            <div class="gallery-box">
+                Social Service
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <h2 class="section-title">Video Gallery</h2>
+
+        <div class="section-line"></div>
+
+        <div class="gallery-box">
+
+            Foundation Videos Coming Soon
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <h2 class="section-title">Contact Us</h2>
+
+        <div class="section-line" style="background:white;"></div>
+
+        <div class="contact-info">
+
+            <p>
+
+                📞 <strong>Contact:</strong>
+
+                <a href="tel:8872295035">
+                    8872295035
+                </a>
+
+                &nbsp; | &nbsp;
+
+                <a href="tel:9988130729">
+                    9988130729
+                </a>
+
+            </p>
+
+
+            <p>
+
+                ✉️ <strong>Email:</strong>
+
+                <a href="mailto:satyavachecharitablefoundation@gmail.com">
+                    satyavachecharitablefoundation@gmail.com
+                </a>
+
+            </p>
+
+
+            <div class="social-links">
+
+                <a href="https://x.com/satyavacheCF"
+                   target="_blank">
+                    𝕏 X / Twitter
+                </a>
+
+
+                <a href="https://www.instagram.com/satyavachecharitablefoundation/"
+                   target="_blank">
+                    📸 Instagram
+                </a>
+
+
+                <a href="https://www.facebook.com/satyavachecharitablefoundation/"
+                   target="_blank">
+                    👍 Facebook
+                </a>
+
+            </div>
+
+
+            <a class="contact-button"
+               href="mailto:satyavachecharitablefoundation@gmail.com">
+
+                ✉️ Contact the Foundation
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 Satyavache Charitable Foundation (Reg.)
+
+    <br>
+
+    Serving Society • Empowering Communities • Building a Better Future
+
+</footer>
+
+
+</body>
+    </html>
